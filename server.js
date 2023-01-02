@@ -9,12 +9,9 @@ mongoose.Promise = global.Promise;
 //mongoose.set('debug', true);
 
 
-var corsOptions = {
-  origin: "https://assignment-app-heroku.herokuapp.com"
-};
 
 // On autorise les connexions cross-domain (CORS)
-app.use(cors(corsOptions));
+app.use(cors());
 
 // parse requests of content-type - application/json
 app.use(express.json());
